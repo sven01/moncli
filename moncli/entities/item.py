@@ -18,6 +18,7 @@ class Item():
 
         self.id = kwargs['id']
         self.name = kwargs['name']
+        self.updated_at = kwargs['updated_at']
 
         for key, value in kwargs.items():
 

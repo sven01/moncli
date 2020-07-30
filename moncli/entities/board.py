@@ -17,7 +17,7 @@ class Board():
         for key, value in kwargs.items():
 
             if key == 'name':
-                self.name = value
+                self.name = value            
 
             if key == 'board_folder_id':
                 self.board_folder_id = value
@@ -43,7 +43,7 @@ class Board():
             elif key == 'state':
                 self.state = value
 
-
+            
     def add_column(self, title:str, column_type: ColumnType):
         
         column_data = client.create_column(
@@ -155,7 +155,8 @@ class Board():
             'creator_id',
             'group.id',
             'state',
-            'subscribers.id'
+            'subscribers.id',
+            'updated_at'
         ]
 
         if not hasattr(self, '__item_ids'):
